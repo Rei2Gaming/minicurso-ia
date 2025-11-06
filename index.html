@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Widget Minicurso IA</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos para garantir que o widget seja embedável e não interfira no site hospedeiro */
+        .ia-minicourse-widget {
+            all: initial; /* Reset all styles */
+            display: block;
+            font-family: 'Arial', sans-serif; /* Fallback font */
+            box-sizing: border-box;
+            max-width: 100%;
+            margin: 0 auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .ia-minicourse-widget * {
+            all: unset; /* Unset all child styles */
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div id="iaMinicourseWidget" class="ia-minicourse-widget">
+        <header class="widget-header">
+            <h1>Guia Essencial: O Que Você Precisa Saber Antes de Comprar Qualquer Curso de Inteligência Artificial (IA)</h1>
+            <p>Seu checklist interativo para investir com sabedoria no seu futuro em IA.</p>
+        </header>
+
+        <div class="course-progress">
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 0%;"></div>
+            </div>
+            <span class="progress-text">0% Concluído</span>
+        </div>
+
+        <main class="course-content">
+            <!-- Módulo 1 -->
+            <section class="module" data-module="1">
+                <h2 class="module-title">Módulo 1: Desmistificando a IA - O Básico que Você Precisa Entender</h2>
+                <div class="module-body">
+                    <div class="lesson">
+                        <h3>1.1 O que é, de Fato, Inteligência Artificial?</h3>
+                        <p><strong>Definição Simples:</strong> IA é um campo da ciência da computação focado em criar sistemas que podem realizar tarefas que normalmente exigiriam inteligência humana.</p>
+                        <p><strong>Mitos Comuns:</strong> Desmistificar a ideia de que IA é apenas robôs ou ficção científica. Focar em aplicações práticas (assistentes virtuais, recomendações, etc.).</p>
+                        <button class="complete-lesson" data-lesson="1.1">Lição Concluída</button>
+                    </div>
+                    <div class="lesson">
+                        <h3>1.2 Tipos de IA: Qual o Foco do Curso?</h3>
+                        <p><strong>IA Fraca (Narrow AI):</strong> Focada em uma única tarefa (ex: Siri, ChatGPT). A maioria dos cursos se concentra aqui.</p>
+                        <p><strong>IA Forte (General AI):
+                        <p>Capacidade de realizar qualquer tarefa intelectual humana (ainda teórica).</p>
+                        <p><strong>Machine Learning (ML) e Deep Learning (DL):</strong> Entender que são subcampos da IA e que muitos cursos focam neles.</p>
+                        <button class="complete-lesson" data-lesson="1.2">Lição Concluída</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Módulo 2 -->
+            <section class="module" data-module="2">
+                <h2 class="module-title">Módulo 2: O Caminho de Aprendizagem em IA - Onde Começar e o Que Priorizar</h2>
+                <div class="module-body">
+                    <div class="lesson">
+                        <h3>2.1 A Ordem Correta dos Tópicos (Para Iniciantes)</h3>
+                        <p><strong>Fundamentos:</strong> Lógica de programação, estatística básica e álgebra linear.</p>
+                        <p><strong>Linguagem:</strong> Python (o padrão da indústria) e suas bibliotecas (NumPy, Pandas).</p>
+                        <p><strong>ML Básico:</strong> Algoritmos supervisionados e não supervisionados (Regressão, Classificação).</p>
+                        <p><strong>Projetos Práticos:</strong> A importância de aplicar o conhecimento em projetos reais.</p>
+                        <button class="complete-lesson" data-lesson="2.1">Lição Concluída</button>
+                    </div>
+                    <div class="lesson">
+                        <h3>2.2 Habilidades Essenciais Além do Código</h3>
+                        <p><strong>Pensamento Crítico e Resolução de Problemas:</strong> A IA é uma ferramenta; a habilidade de formular a pergunta certa é crucial.</p>
+                        <p><strong>Comunicação de Dados:</strong> Saber explicar os resultados da IA para não-técnicos.</p>
+                        <p><strong>Ética em IA:</strong> Entender vieses e responsabilidade.</p>
+                        <button class="complete-lesson" data-lesson="2.2">Lição Concluída</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Módulo 3 -->
+            <section class="module" data-module="3">
+                <h2 class="module-title">Módulo 3: Alinhando o Curso ao Seu Nicho e Objetivos</h2>
+                <div class="module-body">
+                    <div class="lesson">
+                        <h3>3.1 Como Definir Seu Nicho de IA (E Por Que Isso Importa)</h3>
+                        <p><strong>Exemplos de Nichos:</strong> Processamento de Linguagem Natural (NLP), Visão Computacional, Finanças, Saúde.</p>
+                        <p><strong>A Ferramenta "Nicho Fácil":</strong> Como usar ferramentas de IA (como o próprio ChatGPT/Gemini) para mapear as habilidades mais requisitadas no seu nicho.</p>
+                        <p><em>Prompt Sugerido:</em> "Quais são as 5 habilidades de IA mais importantes para um [Seu Nicho, ex: Marketing Digital] e quais ferramentas devo aprender primeiro?"</p>
+                        <button class="complete-lesson" data-lesson="3.1">Lição Concluída</button>
+                    </div>
+                    <div class="lesson">
+                        <h3>3.2 Critérios de Avaliação de um Curso de IA</h3>
+                        <p><strong>Foco Prático vs. Teórico:</strong> O curso oferece projetos reais e portfólio?</p>
+                        <p><strong>Credibilidade do Instrutor:</strong> Qual a experiência prática do instrutor no mercado?</p>
+                        <p><strong>Atualização do Conteúdo:</strong> O conteúdo aborda as ferramentas e modelos mais recentes (ex: LLMs, Transformers)?</p>
+                        <p><strong>Comunidade e Suporte:</strong> Existe um canal de suporte ou comunidade para tirar dúvidas?</p>
+                        <button class="complete-lesson" data-lesson="3.2">Lição Concluída</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Conclusão -->
+            <section class="module" data-module="4">
+                <h2 class="module-title">Conclusão: Sua Decisão Informada</h2>
+                <div class="module-body">
+                    <div class="lesson">
+                        <h3>Checklist Final e Próximos Passos</h3>
+                        <p>Você completou o guia! Agora você tem o conhecimento necessário para fazer uma escolha informada. Use este checklist mental antes de finalizar a compra:</p>
+                        <ul>
+                            <li>[ ] Entendi a diferença entre IA Fraca e Forte?</li>
+                            <li>[ ] O curso foca no meu nicho (ou em um nicho que quero seguir)?</li>
+                            <li>[ ] O instrutor tem experiência prática relevante?</li>
+                            <li>[ ] O conteúdo está atualizado com as últimas tendências (LLMs, etc.)?</li>
+                            <li>[ ] O curso oferece projetos práticos para portfólio?</li>
+                        </ul>
+                        <button class="complete-lesson" data-lesson="4.1">Guia Concluído!</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="widget-footer">
+            <p>Criado por IA. Seu Guia para o Sucesso em IA.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

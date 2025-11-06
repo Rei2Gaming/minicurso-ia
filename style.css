@@ -1,0 +1,217 @@
+/*
+ * Estilos para o Widget Interativo do Minicurso IA
+ * Inspiração de Design: airton.fun (Cores quentes, gradientes, tipografia limpa)
+ */
+
+/* Variáveis CSS para Cores */
+:root {
+    --color-primary: #FF6B6B; /* Um vermelho/laranja quente, inspirado no gradiente do airton.fun */
+    --color-secondary: #4ECDC4; /* Um toque de cor complementar para destaque */
+    --color-background: #FFFFFF;
+    --color-text-dark: #333333;
+    --color-text-light: #FFFFFF;
+    --color-progress-bg: #E0E0E0;
+    --color-progress-fill: var(--color-primary);
+    --color-button-bg: var(--color-primary);
+    --color-button-hover: #FF8E8E;
+}
+
+/* Estilos de Reset e Base para o Widget */
+.ia-minicourse-widget {
+    /* O all: initial e all: unset no HTML garantem o isolamento */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    line-height: 1.6;
+    color: var(--color-text-dark);
+    background-color: var(--color-background);
+    padding: 20px;
+    border: 1px solid #EAEAEA;
+}
+
+/* Cabeçalho */
+.widget-header {
+    text-align: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--color-primary);
+}
+
+.widget-header h1 {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 5px;
+    line-height: 1.2;
+}
+
+.widget-header p {
+    font-size: 1em;
+    color: #666;
+    font-style: italic;
+}
+
+/* Barra de Progresso */
+.course-progress {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.progress-bar {
+    height: 8px;
+    background-color: var(--color-progress-bg);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(to right, var(--color-secondary), var(--color-primary));
+    transition: width 0.5s ease-in-out;
+    border-radius: 4px;
+}
+
+.progress-text {
+    font-size: 0.9em;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+/* Conteúdo do Curso (Módulos e Lições) */
+.module {
+    margin-bottom: 20px;
+    border: 1px solid #F0F0F0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.module-title {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    padding: 15px;
+    font-size: 1.2em;
+    font-weight: 600;
+    cursor: pointer; /* Indica que é clicável para expandir/colapsar */
+    display: block;
+    position: relative;
+}
+
+.module-title::after {
+    content: '+';
+    position: absolute;
+    right: 15px;
+    font-size: 1.5em;
+    line-height: 1;
+    transition: transform 0.3s ease;
+}
+
+.module.open .module-title::after {
+    content: '-';
+    transform: rotate(0deg);
+}
+
+.module-body {
+    padding: 0 15px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+}
+
+.module.open .module-body {
+    max-height: 1000px; /* Valor grande para simular auto height */
+    padding: 15px;
+}
+
+.lesson {
+    border-bottom: 1px dashed #EAEAEA;
+    padding: 15px 0;
+}
+
+.lesson:last-child {
+    border-bottom: none;
+}
+
+.lesson h3 {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--color-text-dark);
+    margin-bottom: 10px;
+}
+
+.lesson p {
+    font-size: 0.95em;
+    margin-bottom: 10px;
+}
+
+.lesson strong {
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+/* Botão de Conclusão */
+.complete-lesson {
+    background-color: var(--color-button-bg);
+    color: var(--color-text-light);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.complete-lesson:hover {
+    background-color: var(--color-button-hover);
+}
+
+.lesson.completed .complete-lesson {
+    background-color: var(--color-secondary);
+    cursor: default;
+}
+
+.lesson.completed .complete-lesson:hover {
+    background-color: var(--color-secondary);
+}
+
+.lesson.completed h3 {
+    text-decoration: line-through;
+    color: #999;
+}
+
+/* Rodapé */
+.widget-footer {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #EAEAEA;
+}
+
+.widget-footer p {
+    font-size: 0.8em;
+    color: #999;
+}
+
+/* Estilo para a conclusão do curso */
+.course-completed-message {
+    text-align: center;
+    padding: 30px;
+    background-color: #F9F9F9;
+    border-radius: 8px;
+    margin-top: 20px;
+    border: 2px solid var(--color-secondary);
+}
+
+.course-completed-message h2 {
+    color: var(--color-secondary);
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.course-completed-message p {
+    font-size: 1em;
+    color: var(--color-text-dark);
+}
